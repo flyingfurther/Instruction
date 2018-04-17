@@ -1,29 +1,29 @@
-**����repository���ֿ⣩��
+**建立repository（仓库）：
     $ echo "# upload_by_git" >> README.m
     $ git init
     $ git add README.md
     $ git commit -m "first commit"
-    $ git remote add origin %git@github.com:flyingfurther/upload_by_git.git% # ����%����֮�䲿�ֻ��ɶ�Ӧ��ssh key
-    $ git push -u origin master
+    $ git remote add origin %git@github.com:flyingfurther/upload_by_git.git% # 两个%及其之间部分换成对应的ssh key
+    $ git push -u origin master # 将本地的master分支推送到origin主机，同时指定origin为默认主机，后面就可以不加任何参数使用git push了。
 
-**�����ļ���
-    $ git add filename
-    $ git commit filename
+**增加文件：
+    $ git add 文件名
+    $ git commit 文件名    # 输入指令后，会跳出页面提示要进行的操作，将以newfile为开头所有行前头的“#”都删除
+    $ git push origin master    # 将本地仓库上传到远程仓库
+
+**增加文件夹：
+    $ git add ./文件夹名
+    $ git commit --all  # 输入指令后，会跳出页面提示要进行的操作，将以newfile为开头所有行前头的“#”都删除
     $ git push origin master
 
-**�����ļ��У�
-    $ git add ./�ļ�����
-    $ git commit --all
+**删除文件：
+    $ git fetch # 从远程仓库获取分支
+    $ git rm 文件名
+    $ git commit --all  # 输入指令后，会跳出页面提示要进行的操作，将以delete为开头所有行前头的“#”都删除
     $ git push origin master
 
-**ɾ���ļ���
-    $ git fetch
-    $ git rm �ļ���
-    $ git commit --all
-    $ git push origin master
-
-**ɾ���ļ��У�
-    $ git fetch
-    $ git rm ./�ļ�����
-    $ git commit --all
+**删除文件夹：
+    $ git fetch # 从远程仓库获取分支
+    $ git rm ./文件夹名
+    $ git commit --all  # 输入指令后，会跳出页面提示要进行的操作，将以delete为开头所有行前头的“#”都删除
     $ git push origin master
