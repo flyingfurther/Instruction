@@ -1,28 +1,38 @@
-**建立repository（仓库）：
+** SSH KEY是在网页上建立远程仓库时生成的
+
+** 初次安装后链接自己的GitHub账户
+    $ git config --global user.name "Your Name"
+    $ git config --global user.email "email@example.com"
+    
+** 建立repository（仓库）：
     $ echo "# upload_by_git" >> README.m
     $ git init
     $ git add README.md
     $ git commit -m "first commit"
-    $ git remote add origin %git@github.com:flyingfurther/upload_by_git.git% # 两个%及其之间部分换成对应的ssh key
+    $ git remote add origin %git@github.com:flyingfurther/upload_by_git.git% # 两个%及其之间部分换成对应的ssh key
     $ git push -u origin master # 将本地的master分支推送到origin主机，同时指定origin为默认主机，后面就可以不加任何参数使用git push了。
 
-**增加文件：
+** 下载远程仓库到本地：
+    # 首先选定下载路径，即在输入下面一行代码之前，先打开要保存该文件的文件夹
+    $ git clone %git@github.com:flyingfurther/upload_by_git.git% # 两个%及其之间部分换成对应的ssh key
+
+** 增加文件：
     $ git add 文件名
     $ git commit 文件名    # 输入指令后，会跳出页面提示要进行的操作，将以newfile为开头所有行前头的“#”都删除
     $ git push origin master    # 将本地仓库上传到远程仓库
 
-**增加文件夹：
+** 增加文件夹：
     $ git add ./文件夹名
     $ git commit --all  # 输入指令后，会跳出页面提示要进行的操作，将以newfile为开头所有行前头的“#”都删除
     $ git push origin master
 
-**删除文件：
+** 删除文件：
     $ git fetch # 从远程仓库获取分支
     $ git rm 文件名
     $ git commit --all  # 输入指令后，会跳出页面提示要进行的操作，将以delete为开头所有行前头的“#”都删除
     $ git push origin master
 
-**删除文件夹：
+** 删除文件夹：
     $ git fetch # 从远程仓库获取分支
     $ git rm ./文件夹名
     $ git commit --all  # 输入指令后，会跳出页面提示要进行的操作，将以delete为开头所有行前头的“#”都删除
