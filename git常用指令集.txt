@@ -1,4 +1,5 @@
 ** SSH KEY是在网页上建立远程仓库时生成的
+** 删掉./git开头的隐藏文件夹就可以去掉Git Bash上会提示出现的“master”
 
 ** 初次安装后链接自己的GitHub账户
     $ git config --global user.name "Your Name"
