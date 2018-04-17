@@ -1,0 +1,29 @@
+**建立repository（仓库）：
+    $ echo "# upload_by_git" >> README.m
+    $ git init
+    $ git add README.md
+    $ git commit -m "first commit"
+    $ git remote add origin %git@github.com:flyingfurther/upload_by_git.git% # 两个%及其之间部分换成对应的ssh key
+    $ git push -u origin master
+
+**增加文件：
+    $ git add filename
+    $ git commit filename
+    $ git push origin master
+
+**增加文件夹：
+    $ git add ./文件夹名
+    $ git commit --all
+    $ git push origin master
+
+**删除文件：
+    $ git fetch
+    $ git rm 文件名
+    $ git commit --all
+    $ git push origin master
+
+**删除文件夹：
+    $ git fetch
+    $ git rm ./文件夹名
+    $ git commit --all
+    $ git push origin master
